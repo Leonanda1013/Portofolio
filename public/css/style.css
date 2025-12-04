@@ -1,0 +1,50 @@
+.foto-full {
+    height: 100vh; /* memenuhi tinggi layar */
+    overflow: hidden;
+}
+
+.img-kiri {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* memenuhi kolom tanpa distorsi */
+    object-position: center;
+}
+.social-icon {
+    font-size: 28px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: #0d6efd; /* warna biru bootstrap */
+    transform: scale(1.2);
+}
+
+/* Kontainer baris harus setinggi layar */
+.full-height {
+    height: 100vh;
+}
+
+/* Kolom kiri bisa scroll */
+.col-kiri-scroll {
+    height: 100vh;
+    overflow-y: auto;
+
+    /* sembunyikan scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Kolom kanan tidak scroll */
+.col-kanan-fixed {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sembunyikan scrollbar tapi tetap bisa scroll (untuk Chrome, Edge, Safari) */
+.col-kiri-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+
