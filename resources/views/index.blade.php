@@ -68,7 +68,21 @@
         document.getElementById("achivmentHuman").style.display = "none";
         document.getElementById("aboutText").style.display = "none";
     }
+    function openFoto(img) {
+    // buat elemen wrapper
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("fullscreen");
 
+    // duplikasi foto
+    const bigImg = document.createElement("img");
+    bigImg.src = img.src;
+
+    // klik area gelap untuk close
+    wrapper.onclick = () => wrapper.remove();
+
+    wrapper.appendChild(bigImg);
+    document.body.appendChild(wrapper);
+}
 </script>
 
   <body>
@@ -103,20 +117,150 @@
 
                 <!-- ACHIVEMENT INFORMATICS -->
                 <div id="achivmentInformatics" class="p-4 text-white" style="display:none; height:100vh; background:#363333;">
-                    <h2>Achievement Informatics</h2>
-                    <p>Konten Informatics...</p>
+                    <h2 class="mb-3">Achievement Informatics</h2>
+
+
+
+                    <div class="achievements-scroll">
+                        <div class="card youtube-card mb-3">
+                            <img src="{{ asset('img/UIUX.png') }}" alt="kucing" class="youtube-thumb" style="height: 100%" onclick="openFoto(this)">
+                            <div class="card-body">
+                               <h5 class="card-title fw-bold" style="color: #363333">Best Inovation UI/UX Design Techomfest</h5>
+                                <p class="card-text text-muted">Upgrade : <br> - UI/UX Design Skills.<br> - Strong ability to collaborate effectively within a team environment <br> - Ability to Present Work to Users</p>
+                            </div>
+                        </div>
+                        <div class="card youtube-card mb-3">
+                            <img src="{{ asset('img/SertifAI.png') }}" alt="sertifAI" class="youtube-thumb" style="height: 100%" onclick="openFoto(this)">
+                            <div class="card-body">
+                               <h5 class="card-title fw-bold" style="color: #363333">AI Ready ASEAN</h5>
+                                <p class="card-text text-muted">Upgrade : Understanding how Artificial Intelligence (AI) operates</p>
+                            </div>
+                        </div>
+                        <div class="card youtube-card mb-3">
+                            <img src="{{ asset('img/JatimDevelop.png') }}" alt="kucing" class="youtube-thumb" style="height: 50%"  onclick="openFoto(this)">
+                            <div class="card-body">
+                               <h5 class="card-title fw-bold" style="color: #363333">Jatim Developer Day Malang</h5>
+                                <p class="card-text text-muted">Upgrade : Knowledge of technology and the concept of Quality Assurance.</p>
+                            </div>
+                        </div>
+                        <div class="card youtube-card mb-3">
+                            <img src="{{ asset('img/scholltech.png') }}" alt="kucing" class="youtube-thumb" onclick="openFoto(this)" style="height: 50%">
+                            <div class="card-body">
+                               <h5 class="card-title fw-bold" style="color: #363333">Scholltech Intern as System Analist</h5>
+                                <p class="card-text text-muted">Upgrade : <br> - in system analysis / System Analyst competencies.<br> - Understanding how to collaborate efficiently within a group</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <!-- PORTOFOLIO -->
                 <div id="portofolio" class="p-4 text-white" style="display:none; height:100vh; background:#363333;">
                     <h2>Portofolio</h2>
-                    <p>Konten Portofolio...</p>
+                    <div class="achievements-scroll">
+                        <div class="card youtube-card mb-3">
+                            <a href="https://colab.research.google.com/drive/1JJgbPumFso6LWlm1yXdHr8KbwzSg3lP1?usp=sharing" target="_blank">
+                                <img src="{{ asset('img/PCVK.png') }}" alt="Project" class="youtube-thumb">
+                            </a>
+                            <div class="card-body">
+                               <h5 class="card-title fw-bold" style="color: #363333">Project : Identification of a person’s identity when wearing a mask</h5>
+                                <p class="card-text text-muted">Technical skills in computer vision and image processing</p>
+                            </div>
+                        </div>
+                        <div class="card youtube-card mb-3">
+                            <a href="https://github.com/Leonanda1013/Pembelajaran_Mesin" target="_blank">
+                                <img src="{{ asset('img/ML.png') }}" alt="Project" class="youtube-thumb">
+                            </a>
+
+                            <div class="card-body">
+                               <h5 class="card-title fw-bold" style="color: #363333">Mechine Learning</h5>
+                                <p class="card-text text-muted">Technical skills in machine learning</p>
+                            </div>
+                        </div>
+                        <div class="card youtube-card mb-3">
+                            <a href="https://github.com/Leonanda1013/PCVK_Ganjil_2025" target="_blank">
+                                <img src="{{ asset('img/PCVK1.png') }}" alt="Project" class="youtube-thumb">
+                            </a>
+                            <div class="card-body">
+                               <h5 class="card-title fw-bold" style="color: #363333">Computer vision image processing</h5>
+                                <p class="card-text text-muted">Technical skills in computer vision and image processing</p>
+                            </div>
+                        </div>
+                        <div class="card youtube-card mb-3">
+                            <a href="https://simantap.dbsnetwork.my.id/" target="_blank">
+                                <img src="{{ asset('img/SIMANTAP.png') }}" alt="Project" class="youtube-thumb">
+                            </a>
+                            <div class="card-body">
+                               <h5 class="card-title fw-bold" style="color: #363333">Poject as System Analist</h5>
+                                <p class="card-text text-muted">SIMANTAP : Sistem Pelaporan Cepat Tanggap</p>
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
 
                 <!-- ACHIVEMENT HUMAN -->
                 <div id="achivmentHuman" class="p-4 text-white" style="display:none; height:100vh; background:#363333;">
                     <h2>Achievement as Human</h2>
-                    <p>Konten Human...</p>
+                    <div class="achievements-scroll">
+                    <div class="card youtube-card mb-3">
+                        <video class="youtube-video" controls>
+                            <source src="{{ asset('video/melatih1.mp4') }}" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" style="color: #363333">Basketball Coach 2024-Present</h5>
+                            <p class="card-text text-muted">Upgrade : The ability to communicate complex knowledge in simple, easy-to-understand language</p>
+                        </div>
+                    </div>
+                     <div class="card youtube-card mb-3">
+                            <img src="{{ asset('img/1B.png') }}" alt="kucing" class="youtube-thumb" onclick="openFoto(this)">
+                            <div class="card-body">
+                               <h5 class="card-title fw-bold" style="color: #363333">Class Leader in the First Year</h5>
+                                <p class="card-text text-muted">Upgrade : Leadership, Communication skills, management skills</p>
+                            </div>
+                    </div>
+                     <div class="card youtube-card mb-3">
+                            <img src="{{ asset('img/2A.png') }}" alt="kucing" class="youtube-thumb" onclick="openFoto(this)">
+                            <div class="card-body">
+                               <h5 class="card-title fw-bold" style="color: #363333">Class Leader in the Second Year</h5>
+                                <p class="card-text text-muted">Upgrade : Leadership, Communication skills, management skills</p>
+                            </div>
+                    </div>
+                     <div class="card youtube-card mb-3">
+                            <img src="{{ asset('img/3D.png') }}" alt="kucing" class="youtube-thumb" onclick="openFoto(this)">
+                            <div class="card-body">
+                               <h5 class="card-title fw-bold" style="color: #363333">Class Leader in the Third Year</h5>
+                                <p class="card-text text-muted">Upgrade : Leadership, Communication skills, management skills</p>
+                            </div>
+                    </div>
+                                         <div class="card youtube-card mb-3">
+                            <img src="{{ asset('img/Jualan.png') }}" alt="kucing" class="youtube-thumb" onclick="openFoto(this)">
+                            <div class="card-body">
+                               <h5 class="card-title fw-bold" style="color: #363333">Selling Ramadan snacks (takjil)</h5>
+                                <p class="card-text text-muted">Upgrade : Communication skills, Management skills, Entrepreneurship skills</p>
+                            </div>
+                    </div>
+                            <div class="card youtube-card mb-3">
+                            <img src="{{ asset('img/Barista.png') }}" alt="kucing" class="youtube-thumb" onclick="openFoto(this)">
+                            <div class="card-body">
+                               <h5 class="card-title fw-bold" style="color: #363333">Barista Koldjen Djaja 2023</h5>
+                                <p class="card-text text-muted">Upgrade : Communication skills, Management skills, Entrepreneurship skills</p>
+                            </div>
+                    </div>
+                    <div class="card youtube-card mb-3">
+                        <video class="youtube-video" controls>
+                            <source src="{{ asset('video/KMK.mp4') }}" type="video/mp4">
+                        </video>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold" style="color: #363333">KMK Organization as Media Leader</h5>
+                            <p class="card-text text-muted">Upgrade : Leadership, Communication Skill</p>
+                        </div>
+                    </div>
+
+
+
+                    </div>
                 </div>
 
             </div>
@@ -138,23 +282,23 @@
                 <!-- BARIS IKON SOSMED -->
                 <div class="d-flex gap-3 mt-2">
 
-                    <a href="https://www.kaggle.com" target="_blank" class="social-icon">
+                    <a href="http://kaggle.com/vincentius1013" target="_blank" class="social-icon">
                         <i class="bi bi-bar-chart-fill"></i>
                     </a>
 
-                    <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+                    <a href="https://www.linkedin.com/in/vincentius-leonanda-prabowo-952a88292/" target="_blank" class="social-icon">
                         <i class="bi bi-linkedin"></i>
                     </a>
 
-                    <a href="https://github.com" target="_blank" class="social-icon">
+                    <a href="https://github.com/Leonanda1013" target="_blank" class="social-icon">
                         <i class="bi bi-github"></i>
                     </a>
 
-                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <a href="https://www.instagram.com/vncttiooo_/" target="_blank" class="social-icon">
                         <i class="bi bi-instagram"></i>
                     </a>
 
-                    <a href="mailto:email@gmail.com" target="_blank" class="social-icon">
+                    <a href="mailto:leonandaprabowo@gmail.com" target="_blank" class="social-icon">
                         <i class="bi bi-envelope-fill"></i>
                     </a>
                 </div>
